@@ -10,24 +10,44 @@ const run = async (inputText, setResult) => {
 
 function App() {
   const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
     const inputText = event.target.elements.inputText.value;
     await run(inputText, setResult);
+    setLoading(false);
   };
 
   return (
     <>
-      <h1>Test</h1>
+      <h1>Test test</h1>
       <div className="card">
         <form onSubmit={handleSubmit}>
-          <input className="input" type="text" name="inputText" />
+          <span className="spacer"></span>
+          <input
+            className="input"
+            type="text"
+            name="inputText"
+            placeholder="Escribe tu pregunta aquí..."
+          />
+          <span className="spacer"></span>
           <button type="submit">Enviar</button>
         </form>
+
+        {loading && (
+          <div>
+            <span className="spacer"></span>
+            ...
+          </div>
+        )}
         {result && (
           <div>
-            Respuesta: <div className="input">{result}</div>
+            <span className="spacer"></span>
+            Respuesta:
+            <span className="spacer"></span>
+            <div className="input">{result}</div>
           </div>
         )}
       </div>
