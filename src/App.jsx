@@ -3,7 +3,7 @@ import { client } from "@gradio/client";
 import "./App.css";
 
 const predictA = async (inputText, setResult) => {
-  const app = await client("https://pharmaia-pharmawise.hf.space/");
+  const app = await client("https://pharma-ia-pharmawise-prospecto-megalabs.hf.space/");
   const result = await app.predict("/predict", [inputText]);
   setResult(result?.data);
 };
@@ -30,7 +30,9 @@ function App() {
 
   return (
     <>
-      <h1>Test test</h1>
+      <h1>Api test</h1>
+
+
       <div className="card">
         <form onSubmit={handleSubmit}>
           <span className="spacer"></span>
@@ -67,9 +69,8 @@ function App() {
         {result && (
           <div>
             <span className="spacer"></span>
-            Respuesta:
-            <span className="spacer"></span>
-            {result}
+            <span className="examples">Respuesta:</span>
+            <span className="examples">{result}</span>
           </div>
         )}
       </div>
