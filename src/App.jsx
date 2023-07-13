@@ -69,8 +69,8 @@ function App() {
         {result && (
           <div>
             <span className="spacer"></span>
-            <span className="examples">Respuesta:</span>
-            <span className="examples">{result}</span>
+            <span className="examples ">Respuesta:</span>
+            <span className="examples example__container">{result}</span>
           </div>
         )}
       </div>

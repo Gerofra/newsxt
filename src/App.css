@@ -28,7 +28,14 @@
   opacity: 0.5;
   margin: 3px 0;
 }
-
 .examples:hover, .examples:focus {
   opacity: 1;
 }
+
+.example__container {
+  display: block;
+  font-size: 1em;
+  width: 100%;
+  max-width: 600px;
+}
+
