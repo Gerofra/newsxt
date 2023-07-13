@@ -3,7 +3,7 @@ import { client } from "@gradio/client";
 import "./App.css";
 
 const predictA = async (inputText, setResult) => {
-  const app = await client("https://gerofra-gerofra.hf.space/");
+  const app = await client("https://pharma-ia-pharmawise-prospecto-megalabs.hf.space/");
   const result = await app.predict("/predict", [inputText]);
   setResult(result?.data);
 };
