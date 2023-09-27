@@ -13,7 +13,7 @@ function App() {
   // Define the streaming function
   const streamTextGeneration = async () => {
     // Create an instance of HfInferenceEndpoint with your endpoint URL and token
-    const hf = new HfInferenceEndpoint('https://YOUR_ENDPOINT.endpoints.huggingface.cloud', 'hf_YOUR_TOKEN');
+    const hf = new HfInferenceEndpoint('https://pharma-ia-pharmawise-prospecto-megalabs-v2-9.hf.space/');
 
     // Define the prompt
     const prompt = 'What can you do in Nuremberg, Germany? Give me 3 Tips';
