@@ -13,7 +13,7 @@ function App() {
   // Define the streaming function
   const streamTextGeneration = async () => {
     // Create an instance of HfInferenceEndpoint with your endpoint URL and token
-    const hf = new HfInferenceEndpoint('https://pharma-ia-pharmawise-prospecto-megalabs-v2-9.hf.space/');
+    const hf = new HfInferenceEndpoint('');
 
     // Define the prompt
     const prompt = 'What can you do in Nuremberg, Germany? Give me 3 Tips';
@@ -28,7 +28,7 @@ function App() {
   };
 
   const predictA = async (inputText) => {
-    const app = await client("https://pharma-ia-pharmawise-prospecto-megalabs-v2-9.hf.space/");
+    const app = await client("");
     const result = await app.predict("/predict", [inputText]);
     setResult(result?.data);
   };
